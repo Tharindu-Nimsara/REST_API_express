@@ -38,4 +38,11 @@ app.put("/blogs/:id", convertParams, (req, res) => {
   res.send(blogs[index]);
 });
 
+//GET with ID
+app.get("/blogs/:id",convertParams, (req, res)=>{
+  const {id} = req.params;
+  const index = blogs.findIndex((item)=> item.id == id);
+  res.send(blogs[index]);
+})
+
 app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));
