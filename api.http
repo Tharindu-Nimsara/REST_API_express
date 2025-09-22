@@ -1,0 +1,62 @@
+GET http://localhost:3000
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+content-type: text/html; charset=utf-8
+content-length: 8
+etag: W/"8-fOAfY4FGM2LPau8vhDpZJh6PVYc"
+date: Mon, 22 Sep 2025 06:15:19 GMT
+connection: close
+###
+GET http://localhost:3000/blogs
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+content-type: application/json; charset=utf-8
+content-length: 2
+etag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
+date: Mon, 22 Sep 2025 06:40:47 GMT
+connection: close
+###
+POST http://localhost:3000/blogs
+content-type: application/json
+
+{
+    "title": "My first post",
+    "Content": "This is my first post"
+}
+
+HTTP/1.1 201  - Created
+x-powered-by: Express
+content-type: application/json; charset=utf-8
+content-length: 17
+etag: W/"11-Z37gV4oNVY+5m1ZtEB7fqJEUbRA"
+date: Mon, 22 Sep 2025 06:40:50 GMT
+connection: close
+###
+PUT http://localhost:3000/blogs/1
+content-type: application/json
+
+{
+    "id": 1,
+    "title": "My first updated post",
+    "content": "This is my first updated post"
+}
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+content-type: application/json; charset=utf-8
+content-length: 82
+etag: W/"52-+vdeL8qvkDLVMas0r7nYJmNUGVg"
+date: Mon, 22 Sep 2025 06:40:52 GMT
+connection: close
+###
+GET http://localhost:3000/blogs
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+content-type: application/json; charset=utf-8
+content-length: 151
+etag: W/"97-npoXgKt5kHZy5lLaPYZw8qgcmy0"
+date: Mon, 22 Sep 2025 06:40:55 GMT
+connection: close
