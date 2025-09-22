@@ -15,7 +15,7 @@ x-powered-by: Express
 content-type: application/json; charset=utf-8
 content-length: 2
 etag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
-date: Mon, 22 Sep 2025 06:50:05 GMT
+date: Mon, 22 Sep 2025 07:45:38 GMT
 connection: close
 ###
 POST http://localhost:3000/blogs
@@ -31,7 +31,7 @@ x-powered-by: Express
 content-type: application/json; charset=utf-8
 content-length: 17
 etag: W/"11-Z37gV4oNVY+5m1ZtEB7fqJEUbRA"
-date: Mon, 22 Sep 2025 06:50:09 GMT
+date: Mon, 22 Sep 2025 07:45:42 GMT
 connection: close
 ###
 PUT http://localhost:3000/blogs/1
@@ -48,7 +48,7 @@ x-powered-by: Express
 content-type: application/json; charset=utf-8
 content-length: 82
 etag: W/"52-+vdeL8qvkDLVMas0r7nYJmNUGVg"
-date: Mon, 22 Sep 2025 06:50:31 GMT
+date: Mon, 22 Sep 2025 07:45:45 GMT
 connection: close
 ###
 GET http://localhost:3000/blogs
@@ -57,8 +57,8 @@ HTTP/1.1 200  - OK
 x-powered-by: Express
 content-type: application/json; charset=utf-8
 content-length: 151
-etag: W/"97-npoXgKt5kHZy5lLaPYZw8qgcmy0"
-date: Mon, 22 Sep 2025 06:40:55 GMT
+etag: W/"97-qhVNcq7YaUDNJx3iosy+WHN47IM"
+date: Mon, 22 Sep 2025 07:46:02 GMT
 connection: close
 ###
 GET http://localhost:3000/blogs/1
@@ -68,5 +68,23 @@ x-powered-by: Express
 content-type: application/json; charset=utf-8
 content-length: 82
 etag: W/"52-+vdeL8qvkDLVMas0r7nYJmNUGVg"
-date: Mon, 22 Sep 2025 06:50:33 GMT
+date: Mon, 22 Sep 2025 07:45:59 GMT
 connection: close
+###
+DELETE http://localhost:3000/blogs/2
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+content-type: application/json; charset=utf-8
+content-length: 22
+etag: W/"16-GWsV8lj5M7Ia4ionwXCaGf2aQJk"
+date: Mon, 22 Sep 2025 07:45:56 GMT
+connection: close
+###
+
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+date: Mon, 22 Sep 2025 07:46:33 GMT
+connection: close
+content-length: 0

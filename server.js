@@ -33,16 +33,27 @@ app.post("/blogs", (req, res) => {
 //UPDATE
 app.put("/blogs/:id", convertParams, (req, res) => {
   const { id } = req.params;
-  const index = blogs.findIndex((item) => item.id == id);
+  const index = blogs.findIndex((item) => item.id == id); //matches the id with array index and get the index
   blogs[index] = req.body;
   res.send(blogs[index]);
 });
 
 //GET with ID
-app.get("/blogs/:id",convertParams, (req, res)=>{
-  const {id} = req.params;
-  const index = blogs.findIndex((item)=> item.id == id);
+app.get("/blogs/:id", convertParams, (req, res) => {
+  const { id } = req.params;
+  const index = blogs.findIndex((item) => item.id == id);
   res.send(blogs[index]);
-})
+});
+
+//DELETE with ID
+app.delete("/blogs/:id", convertParams, (req, res) => {
+  const { id } = req.params;
+  const index = blogs.findIndex((item) => item.id == id); // this gives -1 if there is no such id
+  if (index == -1) {
+    return res.status(404).send({ message: "Not Found!" }); //return for exit after running this
+  }
+  blogs.splice(index, 1);
+  res.send({ message: "Deleted!" });
+});
 
 app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));
